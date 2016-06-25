@@ -18,11 +18,11 @@
 
 ## Outline / Notes
 
-At this point you should feel comfortable with boolean expressions and ````if/else```` conditional clauses.  If you have any confusion about those topics please stop and review them before continuing beause this less is about a *more advanced* version of ````if/else````.
+At this point you should feel comfortable with boolean expressions and ````if/else```` conditional clauses.  If you have any confusion about those topics please stop and review them before continuing beause this lesson is about a *more advanced* version of ````if/else````.
 
-You may have noticed that when you're chaining multiple ````if/else```` conditions together your code can start to a little... *hairy*; that's because while it's *possible* to chain as may ````if/else```` conditions together as you want the construct wasn't really designed for that.
+You may have noticed that when you're chaining multiple ````if/else```` conditions together your code can start to feel a little... *hairy*; that's because while it's *possible* to chain as may ````if/else```` conditions together as you want the construct wasn't really designed for that.
 
-the ````Switch```` statement has one purpose which it is exceedingly good at: helping you write clear and correct code when you need to take more than two courses of action based upon the value of a constant, variable, or the returned value of a function.
+The ````Switch```` statement has one purpose which it is exceedingly good at: helping you write clear and correct code when you need to take more than two courses of action based upon the value of a constant, variable, or the returned value of a function.
 
 In the previous lesson we had the following chained ````if/else````:
 
@@ -44,7 +44,7 @@ There are two problems with code like this.  The first problem is that the repet
 Let's see how the above Conditional chain would look if re-written as a Switch:
 
 ````Swift
-switch( sallyDressColor ) {
+switch sallyDressColor  {
 	case "yellow":
 		wearSomethingGreen()
 		
@@ -70,7 +70,7 @@ Using the ````if/else```` example above, we woudn't know what to wear if Sally w
 
 The Swift compiler very helpfully makes sure that every possible value of whatever we're "switching" over is handled.  So, we could use a ````switch```` for a boolean value:
 
-````Switch
+````Swift
 switch 5 <= 3 {
 	case true:
 		print("true")
@@ -101,26 +101,37 @@ switch 5 <3 {
 ````
 then the compiler would helpfully tell us that we weren't handling all possible values.
 
+![non-exhaustive switch error](http://i.imgur.com/7VtpDal.png?1)
+
 The final trick we'll cover is using ````ranges```` with ````switch````.  For example, if you want to check if a value is between 1 and 5 or 6 and 10, you *could* write:
 
 ````Swift
-if x > 1  &&  x < 5 {
-	// do this
-else if  > 6  &&  x < 10 {
-	// do that
+let x = 9
+
+if x >= 1 && x <= 5 {
+    print("x is in the range of 1-5")
+} else if x >= 6 && x <= 10 {
+    print("x is in the range of 6-10")
 }
+
+// prints "x is in the range of 6-10"
 ````
 
 Or, you could use write it like this:
 
 ````Swift
-switch ( x ) {
-	case 1..5:
-		// do this
-		
-	case 6..10:
-		// do that
+let x = 9
+
+switch x {
+case 1...5:
+    print("Range is 1-5")
+case 6...10:
+    print("Range is 6-10")
+default:
+    print("x is greater than 10")
 }
+
+// prints "Range is 6-10"
 ````
 
 Which do YOU think is easier to read, write and debug?
