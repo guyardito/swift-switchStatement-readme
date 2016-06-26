@@ -20,7 +20,7 @@
 
 At this point you should feel comfortable with boolean expressions and ````if/else```` conditional clauses.  If you have any confusion about those topics please stop and review them before continuing beause this lesson is about a *more advanced* version of ````if/else````.
 
-You may have noticed that when you're chaining multiple ````if/else```` conditions together your code can start to feel a little... *hairy*; that's because while it's *possible* to chain as may ````if/else```` conditions together as you want the construct wasn't really designed for that.
+You may have noticed that when you're chaining multiple ````if/else```` conditions together your code can start to feel a little... *hairy*; that's because while it's *possible* to chain as many ````if/else```` conditions together as you want the construct wasn't really designed for that.
 
 The ````Switch```` statement has one purpose which it is exceedingly good at: helping you write clear and correct code when you need to take more than two courses of action based upon the value of a constant, variable, or the returned value of a function.
 
@@ -124,14 +124,14 @@ let x = 9
 
 switch x {
 case 1...5:
-    print("Range is 1-5")
+    print("x is within the range of 1-5")
 case 6...10:
-    print("Range is 6-10")
+    print("x is within the range of 6-10")
 default:
     print("x is greater than 10")
 }
 
-// prints "Range is 6-10"
+// prints "x is within the range of 6-10"
 ````
 
 Which do YOU think is easier to read, write and debug?
