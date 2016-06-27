@@ -64,7 +64,7 @@ switch sallyDressColor  {
 
 Take a moment to compare and contrast the ````if/else```` chain with the ````switch````; you should start seeing how the ````switch```` statment is much cleaner and clearer.
 
-You should also see *another* imporant difference, namely the presence of ````default```` in the ````switch````.  This solves the second problem with the chained ````if/else````, namely forgetting to handle one or more conditions that need to be handled.
+You should also see *another* important difference, namely the presence of ````default```` in the ````switch````.  This solves the second problem with the chained ````if/else````, namely forgetting to handle one or more conditions that need to be handled.
 
 Using the ````if/else```` example above, we woudn't know what to wear if Sally was wearing a color other than yellow, blue, red or green (and let's face it: if you know Sally at all then you know she's liable to wear *any* color!).  In fact, depending on how the rest of our code was written we'd either wind up wearing a bad color or even not getting dressed at all!
 
